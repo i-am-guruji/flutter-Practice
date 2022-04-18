@@ -5,7 +5,6 @@ void main(){
   runApp(const MyApp());
 }
 
-
 class MyApp extends StatelessWidget {
   const MyApp({ Key? key }) : super(key: key);
 
@@ -13,57 +12,48 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'first app',
+
       home: Scaffold(
         appBar: AppBar(
-          leading: IconButton(
-            tooltip: 'menu',
-            icon: const Icon(Icons.menu),
-            onPressed: (){},
-            ),
-            actions: [
-              IconButton(
-                padding: const EdgeInsets.only(right: 25),
-                tooltip: 'search',
-                onPressed: (){},
-                icon: const Icon(Icons.search),
-                )
-            ],
-            
-          title: const Text('Firts app'),
+          title: Text('Row Widget'),
+
         ),
-        body: Center(
-          child: GestureDetector(
-            onTap: (){
-              print('my button was tab');
-            },
-            child: Container(
-              height: 50,
-              padding: const EdgeInsets.all(8.0),
-              margin: const EdgeInsets.symmetric(horizontal: 8.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25.0),
-                color: Colors.green
+        body: Padding(
+          padding: const EdgeInsets.only(top: 20.0),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Expanded(
+                    child: Image.asset('assets/images/image1.jpg',
+                    height: 200,width: 200,fit: BoxFit.cover)),
+                  Expanded(
+                    child: Image.asset('assets/images/image2.jpg',
+                    height: 200,width: 200,fit: BoxFit.cover)),
+                  Expanded(
+                    child: Image.asset('assets/images/image3.jpg',
+                    height: 200,width: 200,fit: BoxFit.cover)),
+                ],
               ),
-              child: const Center(
-                child: Text(
-                  'Click here'
-                  ),
-                  ),
-            ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.star,color: Colors.green[500],),
+                  Icon(Icons.star,color: Colors.green[500],),
+                  Icon(Icons.star,color: Colors.green[500],),
+                  Icon(Icons.star,color: Colors.black),
+                  Icon(Icons.star,color: Colors.black,),
+                ],
+              )
+            ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: (){},
-          child: IconButton(
-            tooltip: 'Add',
-            icon: Icon(Icons.add),
-            onPressed: (){},),
-          ),
+      ),
       
-        ),
-        
-  
     );
   }
 }
