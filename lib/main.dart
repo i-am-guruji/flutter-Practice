@@ -15,45 +15,45 @@ class MyApp extends StatelessWidget {
 
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Row Widget'),
+          title: Text('List view'),
+        ) ,
+        body: ListView(
+          
+          children: [
+            _tile('CineArts At  the  Empire', '85 W Portal  Ave', Icons.theaters,Icons.send),
+            _tile('The Castro Theater', '429 Castro St', Icons.theaters,Icons.send),
+            _tile('Alamo Drafthouse Cinema', '2550 Mission St', Icons.theaters,Icons.send),
+            _tile('Roxie Theater', '3117 16th St', Icons.theaters,Icons.send),
+            _tile('United Artists Stonestown Twin', '501 Buckingham Way',Icons.theaters,Icons.send),
+            _tile('AMC Metreon 16', '135 4th St #3000', Icons.theaters,Icons.send),
+            const Divider(color: Colors.black,),
+            _tile('K\'s Kitchen', '757 Monterey Blvd', Icons.restaurant,Icons.send),
+            _tile('Emmy\'s Restaurant', '1923 Ocean Ave', Icons.restaurant,Icons.send),
+            _tile('Chaiya Thai Restaurant', '272 Claremont Blvd', Icons.restaurant,Icons.send),
+            _tile('La Ciccia', '291 30th St', Icons.restaurant,Icons.send),
+            
+
+
+          ],
 
         ),
-        body: Padding(
-          padding: const EdgeInsets.only(top: 20.0),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Expanded(
-                    child: Image.asset('assets/images/image1.jpg',
-                    height: 200,width: 200,fit: BoxFit.cover)),
-                  Expanded(
-                    child: Image.asset('assets/images/image2.jpg',
-                    height: 200,width: 200,fit: BoxFit.cover)),
-                  Expanded(
-                    child: Image.asset('assets/images/image3.jpg',
-                    height: 200,width: 200,fit: BoxFit.cover)),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.star,color: Colors.green[500],),
-                  Icon(Icons.star,color: Colors.green[500],),
-                  Icon(Icons.star,color: Colors.green[500],),
-                  Icon(Icons.star,color: Colors.black),
-                  Icon(Icons.star,color: Colors.black,),
-                ],
-              )
-            ],
-          ),
         ),
-      ),
       
     );
   }
+}
+
+ListTile _tile(String title,String subtitle,IconData icon,IconData icons){
+
+  return ListTile(
+    onTap: (){},
+    title: Text(title,style: TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w500
+    ),),
+    subtitle: Text(subtitle),
+    leading: Icon(icon,color: Colors.blue[500],),
+    trailing: Icon(icons,color: Colors.blue[500],),
+
+  );
 }
