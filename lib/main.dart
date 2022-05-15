@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basic/pages/aligning.dart';
 import 'package:flutter_basic/pages/gridview.dart';
 import 'package:flutter_basic/pages/listview.dart';
+import 'package:flutter_basic/pages/stack.dart';
 
 void main(){
   runApp(MyApp());
@@ -18,11 +19,12 @@ class MyApp extends StatelessWidget {
           title: Text('Master'),
         ),
         ),
-        initialRoute: '/listview',
+        initialRoute: '/stack',
         routes: {
           '/this': (context) => AligningWidget(),
           '/grid' : (context) => GridViewsWidget(),
           '/listview' : (context) => ListViewWidget(),
+          '/stack' : (context) => StackWidget()
         },
       
     );
