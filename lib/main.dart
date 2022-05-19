@@ -4,6 +4,7 @@ import 'package:flutter_basic/pages/card.dart';
 import 'package:flutter_basic/pages/gridview.dart';
 import 'package:flutter_basic/pages/listview.dart';
 import 'package:flutter_basic/pages/stack.dart';
+import 'package:flutter_basic/pages/tutorial.dart';
 
 void main(){
   runApp(MyApp());
@@ -20,13 +21,14 @@ class MyApp extends StatelessWidget {
           title: Text('Master'),
         ),
         ),
-        initialRoute: '/card',
+        initialRoute: '/tutorial',
         routes: {
           '/this': (context) => AligningWidget(),
           '/grid' : (context) => GridViewsWidget(),
           '/listview' : (context) => ListViewWidget(),
           '/stack' : (context) => StackWidget(),
-          '/card' : (context) => CardWidget()
+          '/card' : (context) => CardWidget(),
+          '/tutorial' : (context) => Tutorail(),
         },
       
     );
