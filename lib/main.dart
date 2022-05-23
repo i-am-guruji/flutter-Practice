@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic/intractiveapp/ratingapp.dart';
 import 'package:flutter_basic/pages/adaptiveapp.dart';
 import 'package:flutter_basic/pages/aligning.dart';
 import 'package:flutter_basic/pages/card.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           title: Text('Master'),
         ),
         ),
-        initialRoute: '/adaptive',
+        initialRoute: '/rating',
         routes: {
           '/this': (context) => AligningWidget(),
           '/grid' : (context) => GridViewsWidget(),
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
           '/stack' : (context) => StackWidget(),
           '/card' : (context) => CardWidget(),
           '/tutorial' : (context) => Tutorail(),
-          '/adaptive' : (context) => AdaptiveWidget()
+          '/adaptive' : (context) => AdaptiveWidget(),
+          '/rating' : (context) => RatingApp(),
         },
       
     );
