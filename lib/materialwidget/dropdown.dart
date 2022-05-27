@@ -16,14 +16,14 @@ class _DropDownWidgetState extends State<DropDownWidget> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('DropDown'),
+          title: const Text('DropDown'),
         ),
         body: Center(
           child: DropdownButton<String>(
             value: dropdownValue,
-            icon: Icon(Icons.arrow_downward),
+            icon: const Icon(Icons.arrow_downward),
             elevation: 16,
-            style: TextStyle(color: Colors.deepPurple),
+            style: const TextStyle(color: Colors.deepPurple),
 
             underline: Container(
               height: 2,
